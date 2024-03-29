@@ -1,5 +1,6 @@
 import logo from './ferrari.jpg';
 import './App.css';
+import Members from './members';
 
 function App() {
   return (
@@ -9,17 +10,11 @@ function App() {
         <p>
           Taco Hell On Wheels Placeholder
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
+      <Members />
     </div>
   );
 }
 
 export default App;
+
