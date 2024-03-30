@@ -7,13 +7,13 @@ function App() {
   return (
     <div className="App">
       <div>
-      <NavBar />
-      <img src={logo} className="App-logo" alt="logo" />
-      <p>
-        Taco Hell On Wheels Placeholder
-      </p>
-      {/* <Members /> */}
-      </div>
+        <NavBar />
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Taco Hell On Wheels Placeholder
+        </p>
+        {/* <Members /> */}
+        </div>
     </div>
   );
 }
