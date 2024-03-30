@@ -7,7 +7,7 @@ function Members() {
       <div className="MemberList">
         <div className="Member">
           <h2>Matt Breton</h2>
-          <p>"Absolute unit"</p>
+          <p>Absolute unit</p>
         </div>
         <div className="Member">
           <h2>Justin Downes</h2>

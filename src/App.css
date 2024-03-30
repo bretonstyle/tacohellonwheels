@@ -2,6 +2,7 @@
   text-align: center;
   display: flex;
   flex-direction: row;
+  width: 80%;
 }
 
 .App-logo {
@@ -29,6 +30,17 @@
 .App-link {
   color: #61dafb;
 }
+
+/* Add entry for the navbar */
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+  background-color: #282c34;
+} 
+
 
 @keyframes App-logo-spin {
   from {
