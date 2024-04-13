@@ -7,7 +7,7 @@ username = os.environ.get('IRACING_USERNAME')
 password = os.environ.get('IRACING_PASSWORD')
 
 # Init logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s'
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def encode_pw(username, password):
     initialHash = hashlib.sha256((password + username.lower()).encode('utf-8')).digest()
