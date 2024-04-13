@@ -23,5 +23,4 @@ yarn-debug.log*
 yarn-error.log*
 
 #testdata
-/data/testdata.json
-testdata.json
+/src/data/*.json
