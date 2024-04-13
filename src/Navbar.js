@@ -8,12 +8,12 @@ import { Navbar } from "react-bootstrap";
 
 function NavBar() {
     return (
-        <Navbar bg="dark" variant="dark" className="navbar">
-        <Navbar.Brand href="#home">Taco Hell on Wheels</Navbar.Brand>
-        <Navbar.Brand href="#home">Members</Navbar.Brand>
-        <Navbar.Brand href="#home">Events</Navbar.Brand>
-        <Navbar.Brand href="#home">About</Navbar.Brand>
-        </Navbar>
+            <Navbar bg="dark" variant="dark" className="navbar">
+            <Navbar.Brand href="/">Taco Hell on Wheels</Navbar.Brand>
+            <Navbar.Brand href="/members">Members</Navbar.Brand>
+            <Navbar.Brand href="/stats">Stats</Navbar.Brand>
+            <Navbar.Brand href="#home">About</Navbar.Brand>
+            </Navbar>
     );
     }
 

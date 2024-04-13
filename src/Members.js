@@ -1,29 +1,33 @@
+
 function Members() {
+  
   return (
-    <div className="Members">
-      <header className="Members-header">
-        <h1>Members</h1>     
-      </header>
-      <div className="MemberList">
-        <div className="Member">
-          <h2>Matt Breton</h2>
-          <p>Absolute unit</p>
-        </div>
-        <div className="Member">
-          <h2>Justin Downes</h2>
-          <p>Actual lap alien</p>
-        </div>
-        <div className="Member">
-          <h2>Dom</h2>
-          <p>Corvette Champ</p>
-        </div>
-        <div className="Member">
-          <h2>Anthony</h2>
-          <p>MX5 Master</p>
-        </div>
-      </div>
-    </div>
+    <table className="member-table">
+      <thead>
+        <tr>
+          <th scope="col">Roster Number</th>
+          <th scope="col">Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Breton</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Justin</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Dom</td>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td>Anthony</td>
+        </tr>
+      </tbody>
+    </table>
   );
 }
-
 export default Members;

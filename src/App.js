@@ -1,20 +1,30 @@
-import logo from './ferrari.jpg';
+
 import './App.css';
-import Members from './Members';
 import NavBar from './Navbar';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from 'react-router-dom';
+import Home from './Home';
+import Members from './Members';
+import Stats from './Stats';
 
 function App() {
   return (
     <div className="App">
       <div>
         <NavBar />
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Taco Hell On Wheels Placeholder
-        </p>
-        {/* <Members /> */}
+        <Router>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/members" element={<Members />} />
+                <Route path="/stats" element={<Stats />} />
+            </Routes>
+        </Router>
         </div>
     </div>
+     
   );
 }
 
