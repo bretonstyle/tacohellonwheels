@@ -4,6 +4,8 @@ import hashlib
 import base64
 import logging
 import json
+import pprint
+
 from pathlib import Path
 
 username = os.environ.get('IRACING_USERNAME')
@@ -11,6 +13,7 @@ password = os.environ.get('IRACING_PASSWORD')
 
 # Init logging
 logging.basicConfig(filename='data.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+pprint = pprint.PrettyPrinter(indent=4).pprint
 
 def encode_pw(username, password):
     initialHash = hashlib.sha256((password + username.lower()).encode('utf-8')).digest()
@@ -36,6 +39,7 @@ def get_cookie_jar():
     return response.cookies
 
 cookies = get_cookie_jar()
+#TODO: Use local cookies if file is present
 
 #Get the data from the iRacing API. This will return a JSON object that we can use to get the data we need.
 def get_recent_race_data():
@@ -44,4 +48,8 @@ def get_recent_race_data():
     response.raise_for_status()
     return response.json()
 
-logging.debug(get_recent_race_data())
+data_object = get_recent_race_data()
+logging.debug(data_object)
+race_data=requests.get(data_object['link'])
+race_data_dict = race_data.json()
+logging.info(json.dumps(race_data_dict, indent=4, sort_keys=True))
